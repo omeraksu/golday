@@ -145,7 +145,6 @@
 				F9E8DC31C5BD1E27ADDBA4D7 /* Pods-golday-goldayTests.debug.xcconfig */,
 				066FD10A15070BCADBCA23D4 /* Pods-golday-goldayTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -485,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FR9RC6M55L;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = golday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FR9RC6M55L;
 				INFOPLIST_FILE = golday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

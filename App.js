@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import type {Node} from 'react';
 import {
+  Button,
+  InputAccessoryView,
   SafeAreaView,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
@@ -26,11 +30,28 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  const inputAccessoryViewID = 'uniqueID';
+  const initialText = '';
+  const [text, setText] = useState(initialText);
 
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Section title="Lan" />
+      <ScrollView keyboardDismissMode="interactive">
+        <TextInput
+          style={{
+            padding: 16,
+            marginTop: 50,
+          }}
+          inputAccessoryViewID={inputAccessoryViewID}
+          onChangeText={setText}
+          value={text}
+          placeholder={'Please type here…'}
+        />
+      </ScrollView>
+      <InputAccessoryView nativeID={inputAccessoryViewID}>
+        <Button onPress={() => setText(initialText)} title="Clear text" />
+      </InputAccessoryView>
     </SafeAreaView>
   );
 };
